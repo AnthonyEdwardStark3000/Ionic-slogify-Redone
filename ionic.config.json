@@ -1,0 +1,7 @@
+{
+  "name": "Slogify",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
