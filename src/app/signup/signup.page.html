@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title style="text-align: center;font-weight: bold;">Signup</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<img src="./../../assets/undraw_Welcome_re_h3d9.png">
+
+<ion-item color="none">
+  <ion-label position="floating">Employee name</ion-label>
+  <ion-input type="text"laceholder="Enter your Name"></ion-input>
+</ion-item>
+<br>
+
+<ion-item color="none">
+  <ion-label position="floating">Employee ID</ion-label>
+  <ion-input type="text"laceholder="Enter your Employee ID"></ion-input>
+</ion-item>
+<br>
+
+<ion-item color="none">
+  <ion-label position="fixed">Date of Join </ion-label>
+  <ion-input type="date"></ion-input>
+</ion-item>
+<br>
+
+
+<ion-item color="none">
+  <ion-label position="floating">Your Mobile Number </ion-label>
+  <ion-input type="number"></ion-input>
+</ion-item>
+<br>
+
+
+<ion-item color="none">
+  <ion-label position="floating">Enter Password </ion-label>
+  <ion-input type="password"></ion-input>
+</ion-item>
+<br>
+
+
+<ion-item color="none">
+  <ion-label position="floating">Re-enter password </ion-label>
+  <ion-input type="password"></ion-input>
+</ion-item>
+<br>
+
+
+
+<ion-button expand="block" (click)="submit()"><b>Submit</b></ion-button>
+<ion-button  fill="clear" expand="block" (click)="back()">
+  <b style="color: black;">Back</b>
+</ion-button>
+</ion-content>

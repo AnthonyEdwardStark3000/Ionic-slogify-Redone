@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-text color="light" style="text-align: center;">
+      <h1><b>Login</b></h1>
+    </ion-text>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="background-image no-scroll mt-20" padding>
+  <img src="./../../assets/undraw_Login_re_4vu2.png" style="height: 34;">
+  <ion-item color="none">
+    <ion-label position="floating">Name</ion-label>
+    <ion-textarea placeholder="Enter Username"></ion-textarea>
+  </ion-item>
+
+  <ion-item color="none" border-color="none">
+    <ion-label position="floating">password</ion-label>
+    <!-- <ion-textarea></ion-textarea> -->
+    <ion-input type="password"  placeholder="Enter the password"></ion-input>
+  </ion-item>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+      </ion-col>
+      <ion-col>
+      <a [href]="'/forgot-password'" style="text-decoration:none;font-weight: bold;">Forgot password?</a>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+    <ion-button expand="block" (click)="login()"><b>Login</b></ion-button>
+    <ion-grid>
+      <ion-row>
+        <ion-col></ion-col>
+        <ion-col>
+          <a [href]="'/signup'" style="text-align: center;text-decoration: none; font-weight: bold;">Sign up</a>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+</ion-content>

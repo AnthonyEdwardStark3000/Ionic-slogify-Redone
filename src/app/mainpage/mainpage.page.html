@@ -1,0 +1,79 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title style="text-align: center;"><b>Slogify</b></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <!-- To display current date npm i moments ,import * as moment from 'moment';
+,  myDate= moment().format();
+ -->
+  <ion-datetime type="datetime-local" displayFormat="DD -MMM - YYYY" max="2099-12-31" [(ngModel)]="myDate" disabled="true" style="color: red;font-weight: bold; font-family: Arial, Helvetica, sans-serif;"></ion-datetime>
+
+  <img src="./../../assets/undraw_Hello_re_3evm.png" alt="">
+
+  <ion-item color="none">
+    <ion-label position="fixed">Entry time :</ion-label>
+    <ion-input type="time"></ion-input>
+  </ion-item>
+
+  <ion-item color="none">
+    <ion-label position="fixed">Work done :</ion-label>
+    <ion-input type="textarea" placeholder="Enter the work done"></ion-input>
+  </ion-item>
+
+  <ion-item color="none">
+    <ion-label position="fixed">Exit time :</ion-label>
+    <ion-input type="time"></ion-input>
+  </ion-item>
+
+
+
+  <ion-item color="none" style="margin-top: 4px;border: 1px solid blue;border-radius: 10px;">
+    <ion-list>
+      <ion-radio-group>
+        <ion-list-header>
+          <ion-label>
+            Over Time
+          </ion-label>
+        </ion-list-header>
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <ion-item disabled="true">
+                <ion-label> Yes </ion-label>
+                <ion-radio value="yes"></ion-radio>
+              </ion-item>
+            </ion-col>
+
+            <ion-col>
+              <ion-item disabled="true">
+                <ion-label> No </ion-label>
+                <ion-radio value="no" checked></ion-radio>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+
+
+
+
+
+      </ion-radio-group>
+    </ion-list>
+  </ion-item>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="2"></ion-col>
+      <ion-col size="4">
+        <ion-button (click)="next()" color="primary">Submit</ion-button>
+      </ion-col>
+      <ion-col size="4">
+        <ion-button (click)="displayAutoLoader()" color="danger">Cancel</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+</ion-content>
