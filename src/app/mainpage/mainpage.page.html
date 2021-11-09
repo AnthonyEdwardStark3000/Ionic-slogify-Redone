@@ -1,6 +1,9 @@
 <ion-header>
   <ion-toolbar color="primary">
-    <ion-title style="text-align: center;"><b>Slogify</b></ion-title>
+    <ion-title style="margin-left: 70px;"><b>Slogify</b></ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -28,7 +31,6 @@
   </ion-item>
 
 
-
   <ion-item color="none" style="margin-top: 4px;border: 1px solid blue;border-radius: 10px;">
     <ion-list>
       <ion-radio-group>
@@ -40,16 +42,14 @@
         <ion-grid>
           <ion-row>
             <ion-col>
-              <ion-item disabled="true">
-                <ion-label> Yes </ion-label>
-                <ion-radio value="yes"></ion-radio>
+              <ion-item color="none">
+                <ion-label style="font-weight:bold"> Hours </ion-label>
               </ion-item>
             </ion-col>
 
             <ion-col>
-              <ion-item disabled="true">
-                <ion-label> No </ion-label>
-                <ion-radio value="no" checked></ion-radio>
+              <ion-item>
+                <ion-input [placeholder]="hours" disabled></ion-input>
               </ion-item>
             </ion-col>
           </ion-row>

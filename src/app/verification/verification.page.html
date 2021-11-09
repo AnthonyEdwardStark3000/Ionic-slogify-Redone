@@ -10,9 +10,18 @@
   <ion-label position="floating">OTP</ion-label>
   <ion-input placeholder="Enter your OTP"></ion-input>
 </ion-item>
+<ion-grid>
+  <ion-row>
+    <ion-col size="8"></ion-col>
+    <ion-col>
+      <a [href]="'/verification'" style="text-decoration: none; font-weight: bold;color:black">Send again</a>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
 <br>
-<ion-button expand="block"><b>Next</b></ion-button>
-<ion-button  fill="clear" expand="block">
+<ion-button expand="block" (click)="reset()"><b>Next</b></ion-button>
+<ion-button  fill="clear" expand="block" (click)="back()">
   <b style="color: black;">Back</b>
 </ion-button>
 </ion-content>

@@ -1,3 +1,56 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-menu menuId="main-menu" contentId="main">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title style="text-align: center;">Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-item routerLink="/profile">
+          <ion-icon name="person" style="margin-right: 20px;"></ion-icon>
+          <ion-label style="margin-left: 3px;">Profile</ion-label>
+        </ion-item>
+
+        <ion-item routerLink="/login">
+          <ion-icon name="exit" style="margin-right: 20px;"></ion-icon>
+          <ion-label style="margin-left: 3px;">Logout</ion-label>
+        </ion-item>
+
+        <ion-item routerLink="/leave-request">
+          <ion-icon name="calendar" style="margin-right: 20px;"></ion-icon>
+          <ion-label style="margin-left: 3px;">Leave Request</ion-label>
+        </ion-item>
+
+        <ion-item routerLink="/timesheet">
+          <ion-icon name="clipboard" style="margin-right: 20px;"></ion-icon>
+          <ion-label style="margin-left: 3px;">Time sheet</ion-label>
+        </ion-item>
+
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <ion-row rowId="accordion">
+    <ion-col>
+      <mat-accordion multi="true" *ngIf="posts.length>0">
+        <mat-expansion-panel *ngFor="let post of posts">
+          <mat-expansion-panel-header>
+              {{post.title}}
+            </mat-expansion-panel-header>
+            {{post.content}}
+        </mat-expansion-panel>
+      </mat-accordion>
+      <p class="mat-body-1" *ngIf="posts.length<=0" style="text-align: center;">Empty array of lists</p>
+    </ion-col>
+  </ion-row>
+
+  <!-- <my-accordion-group>
+    <my-accordion-item>
+
+    </my-accordion-item>
+  </my-accordion-group>
+-->
+
+  <ion-router-outlet id="main"></ion-router-outlet>
 </ion-app>

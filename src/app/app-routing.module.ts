@@ -33,6 +33,18 @@ const routes: Routes = [
   {
     path: 'leave-request',
     loadChildren: () => import('./leave-request/leave-request.module').then( m => m.LeaveRequestPageModule)
+  },
+  {
+    path: 'leave-provider',
+    loadChildren: () => import('./leave-provider/leave-provider.module').then( m => m.LeaveProviderPageModule)
+  },
+  {
+    path: 'timesheet',
+    loadChildren: () => import('./timesheet/timesheet.module').then( m => m.TimesheetPageModule)
+  },
+  {
+    path: 'profile',
+    loadChildren: () => import('./profile/profile.module').then( m => m.ProfilePageModule)
   }
 ];
 @NgModule({

@@ -15,7 +15,7 @@ export class ForgotPasswordPage implements OnInit {
 
   submit()
   {
-    this.route.navigate(['/password-reset']);
+    this.route.navigate(['/verification']);
   }
 
   back()

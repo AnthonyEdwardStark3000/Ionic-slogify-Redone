@@ -12,7 +12,7 @@ import { IonLoaderService } from '../ion-loader.service';
 export class MainpagePage implements OnInit {
 
   myDate= moment().format();
-
+  hours=0;
   constructor(private ionLoaderService: IonLoaderService,private route: Router) { }
 
   ngOnInit() {
